@@ -14,6 +14,6 @@
 <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.18.0/css/mdb.min.css" rel="stylesheet">
 </head>
 <body>
-    About Us
+   This is an About Us
 </body>
 </html>
