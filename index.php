@@ -32,7 +32,7 @@
             <tbody>
               <tr>
                 <td><?=$internship['duration'];?> months</td>
-                <td>&#8377; <?=$internship['stipend'];?></td>
+                <td>RM <?=$internship['stipend'];?></td>
                 <td><?=$internship['postedOn'];?></td>
                 <td><?=$internship['applyBy'];?></td>
                 <td><?=$internship['positions'];?></td>

@@ -62,7 +62,7 @@
           <tbody>
             <tr>
               <td><?=$duration;?> months</td>
-              <td>&#8377; <?=$stipend;?></td>
+              <td>RM <?=$stipend;?></td>
               <td><?=$postedOn;?></td>
               <td><?=$applyBy;?></td>
               <td><?=$positions;?></td>

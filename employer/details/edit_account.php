@@ -70,7 +70,7 @@
 				              <label for="phone"> </label>
 				            </div>
 				            <div class="md-form form-sm"> <i class="fa fa-map-marker prefix"></i>
-				              <input type="text" id="country" class="form-control form-control-sm" name="country" value="India">
+				              <input type="text" id="country" class="form-control form-control-sm" name="country" value="<?php echo $emp_country;?>">
 				              <label for="country"> </label>
 				            </div>
 						</div>
@@ -83,3 +83,28 @@
 		</div>
 	</div>
 </div>
+
+
+<?php
+	if(isset($_POST['update'])){
+	//	$ip = getIp();
+		$empployer_id = $emp_id;
+		$emp_name = $_POST['nameOfCompany'];
+		$emp_about = $_POST['aboutCompany'];
+		$emp_email = $_POST['email'];
+		$emp_address1 = $_POST['address1'];
+		$emp_address2 = $_POST['address2'];
+		$emp_city = $_POST['city'];
+		$emp_state = $_POST['state'];
+		$emp_zipcode = $_POST['zipcode'];
+		$emp_phone = $_POST['phone'];
+		$emp_country = $_POST['country'];
+
+		$updateEmp = "UPDATE employer SET nameOfCompany = '$emp_name', aboutCompany = '$emp_about', email = '$emp_email', address1 = '$emp_address1', address2 = '$emp_address2', city = '$emp_city', state = '$emp_state', zipcode = '$emp_zipcode', phone = '$emp_phone', country = '$emp_country' WHERE id = '$emp_id'";
+		$run_query = $db->query($updateEmp);
+		if($run_query){
+			echo "<script>alert('Your account has been successfully updated')</script>";
+			echo "<script>window.open('myaccount.php','_self')</script>";
+		}
+	}
+?>

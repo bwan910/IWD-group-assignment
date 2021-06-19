@@ -3,6 +3,16 @@
 	session_start();
 	include 'includes/functions.php';
 ?>
+
+<?php 
+	if(!isset($_SESSION['email'])){
+      echo "<script>window.open('login.php','_self')</script>";
+    }else{
+        echo "<script>window.open('','_self')</script>";
+    }
+?>
+
+
 <?php
   $email = $_SESSION['email'];
   $sql = "SELECT * FROM employer WHERE email = '$email'";
@@ -22,13 +32,7 @@
     }
 ?>
 
-<?php 
-	if(!isset($_SESSION['email'])){
-      echo "<script>window.open('login.php','_self')</script>";
-    }else{
-        echo "<script>window.open('','_self')</script>";
-    }
-?>
+
 <html lang="en">
 <head>
   <meta charset="utf-8">

@@ -18,7 +18,7 @@
 				</div>
 				<div class="p-3">
 					<div class="float-left">
-						<p class="">Forgot your password? <a href="checkout.php?forgot_pass">Click here</a></p>
+						<p class="">Forgot your password? <a href="forgetpassword.php">Click here</a></p>
 					</div>
 					<div class="float-right">
 						<p class="">Don't have an account? <a href="register.php">Register now</a></p>
