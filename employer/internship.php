@@ -76,6 +76,8 @@
               $insertSql = "UPDATE internships SET category = '$category',emp_id = '$emp_id', postedOn = '$postedOn', applyBy = '$applyBy', nameOfCompany = '$nameOfCompany', aboutCompany = '$aboutCompany', aboutInternship = '$aboutInternship', location = '$location', perks = '$perks', duration = '$duration', stipend = '$stipend', positions = '$positions', whoCanApply = '$whoCanApply' WHERE id = '$edit_id'";
             }
           $db->query($insertSql);
+          echo "<script>window.open('internship.php','_self')</script>";
+
         }
     ?>
     <div class="container">
@@ -86,67 +88,70 @@
           </div>
           <div class="card-body">
             <!-- Form -->
-            <form class="text-center" style="color: #757575;" action="internship.php?<?=((isset($_GET['edit']))?'edit='.$edit_id:'add=1');?>" method="post" enctype="multipart/form-data">
+            <form  style="color: #757575;" action="internship.php?<?=((isset($_GET['edit']))?'edit='.$edit_id:'add=1');?>" method="post" enctype="multipart/form-data">
 
               <!-- Category -->
-              <div class="md-form">
+              <div class="form-group">
+                <label for="category">Job name(Category)</label>
                 <input type="text" id="category" name="category" class="form-control" value="<?=$category;?>" required>
-                <label for="category">Category</label>
               </div>
               <!-- Posted On -->
-              <div class="md-form">
-                <input type="date" id="postedOn" name="postedOn" class="form-control" value="<?=$postedOn;?>">
+              <div class="form-group">
                 <label for="postedOn">Posted On</label>
+                <input type="date" id="postedOn" name="postedOn" class="form-control" value="<?=$postedOn;?>">
               </div>
               <!-- Apply By -->
-              <div class="md-form">
-                <input type="date" id="applyBy" name="applyBy" class="form-control" value="<?=$applyBy;?>" required>
+              <div class="form-group">
                 <label for="applyBy">Apply By</label>
+
+                <input type="date" id="applyBy" name="applyBy" class="form-control" value="<?=$applyBy;?>" required>
               </div>
               <!-- Name of Company -->
-              <div class="md-form">
-                <input type="text" id="nameOfCompany" name="nameOfCompany" class="form-control" value="<?=$emp_name;?>" required>
+              <div class="form-group">
                 <label for="nameOfCompany">Name of Company</label>
+                <input type="text" id="nameOfCompany" name="nameOfCompany" class="form-control" value="<?=$emp_name;?>" required>
               </div>
               <!-- About Company -->
-              <div class="md-form">
-                <textarea id="aboutCompany" name="aboutCompany" class="md-textarea form-control" value="<?=$emp_about;?>" rows="3" required></textarea>
+              <div class="form-group">
                 <label for="aboutCompany">About Company</label>
+                <textarea id="aboutCompany" name="aboutCompany" class="md-textarea form-control" rows="3" required><?=$aboutCompany;?></textarea>
               </div>
               <!-- About Internship -->
-              <div class="md-form">
-                <textarea id="aboutInternship" name="aboutInternship" class="md-textarea form-control" value="<?=$aboutInternship;?>" rows="3" required></textarea>
-                <label for="aboutInternship">About Internship</label>
+              <div class="form-group">
+                <label class="left" for="aboutInternship">About Internship</label>
+                <textarea placeholder="About Internship" id="aboutInternship" name="aboutInternship" class="md-textarea form-control" rows="3"  required><?=$aboutInternship;?></textarea>
+
               </div>
               <!-- Location -->
-              <div class="md-form">
-                <input type="text" id="location" name="location" class="form-control" value="<?=$location;?>" required>
+              <div class="form-group">
                 <label for="location">Location</label>
+                <input type="text" id="location" name="location" class="form-control" value="<?=$location;?>" required>
               </div>
               <!-- Perks of Internship -->
-              <div class="md-form">
-                <input type="text" id="perks" name="perks" class="form-control" value="<?=$perks;?>" required>
+              <div class="form-group">
                 <label for="perks">Perks of Internship</label>
+                <input type="text" id="perks" name="perks" class="form-control" value="<?=$perks;?>" required>
               </div>
               <!-- Duration -->
-              <div class="md-form">
+              <div class="form-group">
+                <label for="duration">Duration(Months)</label>
+
                 <input type="number" id="duration" name="duration" class="form-control" value="<?=$duration;?>" required>
-                <label for="duration">Duration</label>
               </div>
               <!-- Stipend -->
-              <div class="md-form">
-                <input type="number" id="stipend" name="stipend" class="form-control" value="<?=$stipend;?>" required>
+              <div class="form-group">
                 <label for="stipend">Salary</label>
+                <input type="number" id="stipend" name="stipend" class="form-control" value="<?=$stipend;?>" required>
               </div>
               <!-- Price -->
-              <div class="md-form">
-                <input type="number" id="positions" name="positions" class="form-control" value="<?=$positions;?>" required>
+              <div class="form-group">
                 <label for="positions">No. of Positions Available</label>
+                <input type="number" id="positions" name="positions" class="form-control" value="<?=$positions;?>" required>
               </div>
               <!--Material textarea-->
-              <div class="md-form">
-                <textarea id="whoCanApply" name="whoCanApply" class="md-textarea form-control" value="<?=$whoCanApply;?>" rows="3" required></textarea>
+              <div class="form-groupm">
                 <label for="whoCanApply">Who Can Apply</label>
+                <textarea id="whoCanApply" name="whoCanApply" class="md-textarea form-control" rows="3" required><?=$whoCanApply;?></textarea>
               </div>
 
               <div class="card-footer">
@@ -169,7 +174,7 @@
           <thead>
             <th></th>
             <th></th>
-            <th class="text-center"><h5 class="h5-responsive"><b>Name of Company</b></h5></th>
+            <th class="text-center"><h5 class="h5-responsive"><b>Job Name (Category)</b></h5></th>
             <th class="text-center"><h5 class="h5-responsive"><b>Location</b></h5></th>
             <th class="text-center"><h5 class="h5-responsive"><b>Duration</b></h5></th>
             <th class="text-center"><h5 class="h5-responsive"><b>Salary</b></h5></th>          
@@ -191,7 +196,7 @@
                 <td>
                   <a href="internship.php?delete=<?=$internship['id'];?>"><i class="fas fa-trash"></i></a>
                 </td>
-                <td class="text-center"><?=$emp_name;?></td>
+                <td class="text-center"><?=$internship['category'];?></td>
                 <td class="text-center"><?=$internship['location'];?></td>
                 <td class="text-center"><?=$internship['duration'];?></td>
                 <td class="text-center"><?=$internship['stipend'];?></td>

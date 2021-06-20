@@ -32,45 +32,45 @@
 					<div class="row">					
 						<div class="col-md-6">
 							<div class="md-form form-sm"> <i class="fa fa-user prefix"></i>
-				              <input type="text" id="nameOfCompany" class="form-control form-control-sm" name="nameOfCompany" value="<?php echo $emp_name;?>">
+				              <input type="text" id="nameOfCompany" class="form-control form-control-sm" name="nameOfCompany" placeholder="Name Of Company" value="<?php echo $emp_name;?>">
 				              <label for="nameOfCompany"></label>
 				            </div>
 				            <div class="md-form form-sm"> <i class="fa fa-user prefix"></i>
-				              <input type="text" id="aboutCompany" class="form-control form-control-sm" name="aboutCompany" value="<?php echo $emp_about;?>">
+				              <input type="text" id="aboutCompany" class="form-control form-control-sm" name="aboutCompany" placeholder="About Company" value="<?php echo $emp_about;?>">
 				              <label for="aboutCompany"></label>
 				            </div>
 				            <div class="md-form form-sm"> <i class="fa fa-envelope prefix"></i>
-				              <input type="email" id="email" class="form-control form-control-sm" name="email" value="<?php echo $emp_email;?>">
+				              <input type="email" id="email" class="form-control form-control-sm" name="email" placeholder="Email" value="<?php echo $emp_email;?>">
 				              <label for="email"></label>
 				            </div>
 				            <div class="md-form form-sm"> <i class="fa fa-map prefix"></i>
-				              <input type="text" id="address1" class="form-control form-control-sm" name="address1" value="<?php echo $emp_address1;?>">
+				              <input type="text" id="address1" class="form-control form-control-sm" name="address1" placeholder="Address 1" value="<?php echo $emp_address1;?>">
 				              <label for="address1"></label>
 				            </div>
 							<div class="md-form form-sm"> <i class="fa fa-map-marker prefix"></i>
-				              <input type="text" id="address2" class="form-control form-control-sm" name="address2" value="<?php echo $emp_address2;?>">
+				              <input type="text" id="address2" class="form-control form-control-sm" name="address2" placeholder="Address 2" value="<?php echo $emp_address2;?>">
 				              <label for="address2"></label>
 				            </div>
 						</div>
 						<div class="col-md-6">
 				            <div class="md-form form-sm"> <i class="fa fa-map-marker prefix"></i>
-				              <input type="text" id="city" class="form-control form-control-sm" name="city" value="<?php echo $emp_city;?>">
+				              <input type="text" id="city" class="form-control form-control-sm" name="city" placeholder="City" value="<?php echo $emp_city;?>">
 				              <label for="city"> </label>
 				            </div>
 				            <div class="md-form form-sm"> <i class="fa fa-map-marker prefix"></i>
-				              <input type="text" id="state" class="form-control form-control-sm" name="state" value="<?php echo $emp_state;?>">
+				              <input type="text" id="state" class="form-control form-control-sm" name="state" placeholder="State" value="<?php echo $emp_state;?>">
 				              <label for="state"> </label>
 				            </div>
 				            <div class="md-form form-sm"> <i class="fa fa-map-marker prefix"></i>
-				              <input type="text" id="zipcode" class="form-control form-control-sm" name="zipcode" value="<?php echo $emp_zipcode;?>">
+				              <input type="text" id="zipcode" class="form-control form-control-sm" name="zipcode" placeholder="Zipcode" value="<?php echo $emp_zipcode;?>">
 				              <label for="zipcode"> </label>
 				            </div>
 				            <div class="md-form form-sm"> <i class="fa fa-phone prefix"></i>
-				              <input type="text" id="phone" class="form-control form-control-sm" name="phone" value="<?php echo $emp_phone;?>">
+				              <input type="text" id="phone" class="form-control form-control-sm" name="phone" placeholder="Phone" value="<?php echo $emp_phone;?>">
 				              <label for="phone"> </label>
 				            </div>
 				            <div class="md-form form-sm"> <i class="fa fa-map-marker prefix"></i>
-				              <input type="text" id="country" class="form-control form-control-sm" name="country" value="<?php echo $emp_country;?>">
+				              <input type="text" id="country" class="form-control form-control-sm" name="country" placeholder="Country" value="<?php echo $emp_country;?>">
 				              <label for="country"> </label>
 				            </div>
 						</div>
